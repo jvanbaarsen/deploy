@@ -4,17 +4,14 @@
 
 # Add the following gems to your gemfile:
 # 	- gem 'capistrano'
-# 	- gem 'rvm-capistrano'	
 # 	- gem 'turbo-sprockets-rails3' (only of you use rails >= 3.2.x)
 # 	- gem 'unicorn' (Only if you use unicorn)
 
-require "rvm/capistrano"
 require "bundler/capistrano"
 
 load 'config/deploy/main'
 load 'config/deploy/recipes/nginx'	
 load 'config/deploy/recipes/unicorn' 	# Only necassary if you use unicorn (please do :-) )
-load 'config/deploy/recipes/assets' 	# Only necessary if you cant use turby-sprockets-rails3 gem
 
 server "YOURSERVERADDRESS", :app, :web, :db, :primary => true # Can be IP or FQDN
 
