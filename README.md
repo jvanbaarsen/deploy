@@ -1,0 +1,4 @@
+deploy
+======
+
+Simple capistrano recipes
